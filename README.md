@@ -20,7 +20,26 @@ In both our datasets, there is a lack of explicit negative feedback.
 ### Diginetica
 > Download [here](https://competitions.codalab.org/competitions/11161)
 
-This dataset is released as part of the *CIKM Cup 2016 Track 2: Personalized E-Commerce Search Challenge*. The dataset features anonymized search, browsing, and purchase logs, product data, and product images. For the purpose of our project, we primarily leverage the view and purchase logs.
+This dataset is released as part of the *CIKM Cup 2016 Track 2: Personalized E-Commerce Search Challenge*. The dataset features anonymized search, browsing, and purchase logs, product data, and product images. For the purpose of our project, we primarily leverage the view and purchase logs. \\
+To reproduce the results, download the image and save it in the ```\data``` folder. We will only need ```data\train-purchases.csv``` and ```train-item-views.csv``` as our input. 
+To get the pre-processed data, where we combine the view and purchase dataframe with a is_purchase flag, run the the following command:
+```
+!python preprocessing_dg.py
+```
+After getting the output file, run the split file to get training and validation data:
+```
+!python split_train.py
+```
+Then use the training set to create replay buffer for the model:
+```
+!python gen_replay_buffer.py
+```
+We'll also calculate item popularity:
+```
+!python cal_pop.py
+```
+The steps above will generate all the files we need to run the DRL python scripts. 
+
 
 ### RetailRocket
 > Download [here](https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset)
@@ -41,7 +60,7 @@ The BPR model requires explicit negative feedback, so we pre-process our dataset
 | **Models**  | **NDCG** | **HR** | **MAP** |
 | :---------: | :-----: | :-----: | :-----: |
 | SNQN-SASRec |   0.142716   |   0.234636   |  N/A   |
-|  SA2C-GRU   |   0.0   |   0.0   |  N/A   |
+|  SA2C-GRU   |   0.226836  |   0.288162   |  N/A   |
 |     BPR     |   0.104363   |   N/A  |  0.000246  |
 
 > We are reporting NDCG, HR and MAP @ 10 for all models.
@@ -95,7 +114,7 @@ Navigate to the folder of the model and dataset you are interested to run. Locat
 │       └── xxx.ipynb
 └── SA2C_GRU
     ├── Diginetica
-    │   └── xxx.ipynb
+    │   └── SAC_GRU_Diginetica.ipynb
     └── RetailRocket
         └── xxx.ipynb
 ```
