@@ -6,26 +6,33 @@ In this project, we implement and benchmark the performance of two Deep Reinforc
 
 ### Deep Reinforcement Models
 #### *Supervised Negative Q-learning (SNQN)*
-Sequential transactional data can be leveraged to recommend relevant products with reinforcement learning algorithms. One limitation to this vanilla approach is the lack of negative reward signals. Xin Xin, et al. proposed the SNQN method to address this positive signal bias by using negative action items 
+Sequential transactional data can be leveraged to recommend relevant products with reinforcement learning (RL) algorithms. One limitation to this vanilla approach is the lack of negative reward signals. Xin Xin, et al. proposed the SNQN method to address this positive signal bias by integrating a negative sampling training strategy for the RL algorithms with a supervised sequential learning algorithm [1].
 
 #### *Supervised Advantage Actor-Critic (SA2C)*
+Taking one step further from the SNQN model is the SA2C framework proposed by Xin Xin, et al. in the same publication [1]. The authors propose calculating the "advatage" of a positive action over the average case to normalize weights and reduce positive bias.
 
 #### Bayesian Personalized Ranking
+[TODO]@Preet
 
 ## 🔢 Data
+In both our datasets, there is a lack of explicit negative feedback. For the purpose of our project, we deem items that a user viewed but did not buy as a proxy for negative feedback and items that are purchased as positive.
+
 ### Diginetica
 > Download [here](https://competitions.codalab.org/competitions/11161)
 
-This dataset is released as part of the *CIKM Cup 2016 Track 2: Personalized E-Commerce Search Challenge*. The dataset features anonymized search, browsing, and purchase logs, product data, and product images. For the purpose of our project we leverage primarily the view and purchase logs.
+This dataset is released as part of the *CIKM Cup 2016 Track 2: Personalized E-Commerce Search Challenge*. The dataset features anonymized search, browsing, and purchase logs, product data, and product images. For the purpose of our project, we primarily leverage the view and purchase logs, where we consider items that any user viewed but did not buy as a negative signal and any items bought as a positive signal.
 
-### RetailRocket
+### Retailrocket
 > Download [here](https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset)
 
-The dataset is released as part of a Kaggle competition. This raw data set contains data on user-item interactions and item properties. For the purpose of this project we leverage the user-item interactions like clicks, add to carts, and transactions.
+The dataset is released as part of a Kaggle competition. This raw data set contains data on user-item interactions and item properties. For the purpose of this project we leverage the user-item interactions like clicks, add to carts, transactions.
 
 ## 🛠️ Methodology
 ### Deep Reinforcement Models
-Both SNQN and SA2C models require click (or view), purchase (or add to cart) data. While both are positive interactions, we treat clicks as negative signals and purchases as positive, where only positive signals affect the user state as part of the model. We leverage the open-sourced implementation [code](https://drive.google.com/file/d/185KB520pBLgwmiuEe7JO78kUwUL_F45t/view) provided in Xin Xin's paper.
+
+
+
+We leverage the open-sourced implementation [code](https://drive.google.com/file/d/185KB520pBLgwmiuEe7JO78kUwUL_F45t/view) provided by Xin Xin, et al. We proceed to preprocess our datasets 
 
 ### Deep Learning Model
 Preprocess data...
@@ -36,8 +43,8 @@ Preprocess data...
 
 | **Models**  | **NDCG** | **HR** | **MAP** |
 | :---------: | :-----: | :-----: | :-----: |
-| SASRec-SNQN |   0.142716   |   0.234636   |  N/A   |
-|  GRU-SA2C   |   0.0   |   0.0   |  N/A   |
+| SNQN-SASRec |   0.142716   |   0.234636   |  N/A   |
+|  SA2C-GRU   |   0.0   |   0.0   |  N/A   |
 |     BPR     |   0.104363   |   N/A  |  0.000246  |
 
 > We are reporting NDCG, HR and MAP @ 10 for all models.
@@ -46,8 +53,8 @@ Preprocess data...
 
 | **Models**  | **NDCG** | **HR** | **MAP** |
 | :---------: | :-----: | :-----: | :-----: |
-| SASRec-SNQN |   0.0   |   0.0   |  N/A   |
-|  GRU-SA2C   |   0.0   |   0.0   |  N/A   |
+| SNQN-SASRec |   0.0   |   0.0   |  N/A   |
+|  SA2C-GRU   |   0.0   |   0.0   |  N/A   |
 |     BPR     |   0.207392   |   N/A   |  0.000268  |
 
 > We are reporting NDCG, HR and MAP @ 10 for all models.
@@ -106,5 +113,4 @@ Navigate to the folder of the model and dataset you are interested to run. Locat
 
 ## 📚 References
 [1] Xin, Xin, et al. "Supervised Advantage Actor-Critic for Recommender Systems." Proceedings of the Fifteenth ACM International Conference on Web Search and Data Mining. 2022.
-[TODO] @Preet Add paper for BPR
 
