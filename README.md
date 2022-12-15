@@ -42,9 +42,10 @@ The BPR model requires explicit negative feedback, so we pre-process our dataset
 
 | **Models**  | **NDCG** |  **HR**  | **MAP**  |
 | :---------: | :------: | :------: | :------: |
-| SNQN-SASRec | 0.142716 | 0.234636 |   N/A    |
-|  SA2C-GRU   | 0.267916 | 0.180273 |   N/A    |
+| SNQN-SASRec | 0.180273 | 0.267916 |   N/A    |
+|  SA2C-GRU   | 0.226836 | 0.288162 |   N/A    |
 |     BPR     | 0.104363 |   N/A    | 0.000246 |
+
 
 > We are reporting NDCG, HR and MAP @ 10 for all models.
 
@@ -113,12 +114,12 @@ Navigate to the folder of the model and dataset you are interested to run. Locat
 │   │   └── xxx.ipynb
 │   └── RetailRocket
 │       └── RetailRocket_BPR_recommender_0p5pct.ipynb
-├── SQNQ_SASRec
+├── SNQN
 │   ├── Diginetica
 │   │   └── SNQN.ipynb
 │   └── RetailRocket
 │       └── xxx.ipynb
-└── SA2C_GRU
+└── SA2C
     ├── Diginetica
     │   └── SAC_GRU_Diginetica.ipynb
     └── RetailRocket
