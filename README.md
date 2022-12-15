@@ -12,7 +12,7 @@ Sequential transactional data can be leveraged to recommend relevant products wi
 
 #### Bayesian Personalized Ranking
 
-## Data
+## 📊 Data
 ### Diginetica
 
 ### Retailrocket
@@ -45,7 +45,7 @@ Preprocess data...
 |  GRU-SA2C   |   0.0   |   0.0   |  0.0   |
 |     BPR     |   0.0   |   0.0   |  0.0.  |
 
-## Reproduce our Study
+## ⚙️ Reproduce our Study
 > Note: CUDA will be required for the code to work! Some of the models are memory and compute intensive.
 
 **1. Clone & Navigate to our Repo**
@@ -86,6 +86,7 @@ Navigate to the folder of the model and dataset you are interested to run. Locat
     │   └── xxx.ipynb
     └── Retailrocket.ipynb
         └── xxx.ipynb
+```
 
 ## Contributors
 
