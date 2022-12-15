@@ -22,17 +22,17 @@ In both our datasets, there is a lack of explicit negative feedback.
 
 This dataset is released as part of the *CIKM Cup 2016 Track 2: Personalized E-Commerce Search Challenge*. The dataset features anonymized search, browsing, and purchase logs, product data, and product images. For the purpose of our project, we primarily leverage the view and purchase logs.
 
-### Retailrocket
+### RetailRocket
 > Download [here](https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset)
 
 The dataset is released as part of a Kaggle competition. This raw data set contains data on user-item interactions and item properties. For the purpose of this project we leverage the user-item interactions like clicks, add to carts, transactions.
 
 ## 🛠️ Methodology
 ### Deep Reinforcement Models
-We leverage the open-sourced implementation [code](https://drive.google.com/file/d/185KB520pBLgwmiuEe7JO78kUwUL_F45t/view) provided by Xin Xin, et al. We proceed to preprocess our datasets 
+Both SNQN and SA2C models require click (or view), purchase (or add to cart) data. While both are positive interactions, we treat clicks as negative signals and purchases as positive, where only positive signals affect the user state as part of the model. We leverage the open-sourced implementation [code](https://drive.google.com/file/d/185KB520pBLgwmiuEe7JO78kUwUL_F45t/view) provided Xin Xin, et al. and we proceed to preprocess our datasets to assign `is_buy` flags and drop users with less than 3 interactions.
 
 ### Deep Learning Model
-Preprocess data...
+The BPR model requires explicit negative feedback, so we pre-process our datasets to assign negative flags to when an existing user did not interact with an item. The limitation to this approach is that it exponetially increases the data size. Due to the larger number of unique users and items in the RetailRocket dataset, we were able to run the model only on a sample of 0.5% of the data.
 
 ## 🔎 Results
 
@@ -46,7 +46,7 @@ Preprocess data...
 
 > We are reporting NDCG, HR and MAP @ 10 for all models.
 
-### Retailrocket
+### RetailRocket
 
 | **Models**  | **NDCG** | **HR** | **MAP** |
 | :---------: | :-----: | :-----: | :-----: |
@@ -86,17 +86,17 @@ Navigate to the folder of the model and dataset you are interested to run. Locat
 ├── BPR
 │   ├── Diginetica
 │   │   └── xxx.ipynb
-│   └── Retailrocket
-│       └── xxx.ipynb
+│   └── RetailRocket
+│       └── RetailRocket_BPR_recommender_0p5pct.ipynb
 ├── SQNQ_SASRec
 │   ├── Diginetica
-│   │   └── xxx.ipynb
-│   └── Retailrocket.ipynb
+│   │   └── SNQN.ipynb
+│   └── RetailRocket
 │       └── xxx.ipynb
-└── SA2C
+└── SA2C_GRU
     ├── Diginetica
     │   └── xxx.ipynb
-    └── Retailrocket.ipynb
+    └── RetailRocket
         └── xxx.ipynb
 ```
 
