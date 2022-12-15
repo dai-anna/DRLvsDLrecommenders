@@ -38,14 +38,18 @@ The BPR model requires explicit negative feedback, so we pre-process our dataset
 
 ## 🔎 Results
 
+We compare NDCG@10 across all models and HR@10 across the DRL models. To keep the results directly comparable, between DRL models, we report results at the maximum number of epochs of training we could manage (around 15epochs).
+
+Overall, we can observe that **SA2C-GRU achieves the best performance** out of our three models while BPR achieves performs the worst performance. The significant drop in performance from the BPR is likely because the model is unable to leverage session data like the DRL models and the preprocessing of building negative feedback comes with too heavy of assumptions. Also in the RetailRocket case, we were only able to leverage 0.5% of the total data.
+
+
 ### Diginetica
 
 | **Models**  | **NDCG** |  **HR**  | **MAP**  |
 | :---------: | :------: | :------: | :------: |
 | SNQN-SASRec | 0.180273 | 0.267916 |   N/A    |
-|  SA2C-GRU   | 0.226836 | 0.288162 |   N/A    |
+|  SA2C-GRU   | 0.215147 | 0.299065 |   N/A    |
 |     BPR     | 0.104363 |   N/A    | 0.000246 |
-
 
 > We are reporting NDCG, HR and MAP @ 10 for all models.
 
@@ -54,8 +58,9 @@ The BPR model requires explicit negative feedback, so we pre-process our dataset
 | **Models**  | **NDCG** | **HR** | **MAP**  |
 | :---------: | :------: | :----: | :------: |
 | SNQN-SASRec | 0.475768 | 0.613615 |   N/A    |
-|  SA2C-GRU   | 0.457511 | 0.557929 |   N/A    |
+|  SA2C-GRU   | 0.491089 | 0.593839 |   N/A    |
 |     BPR     | 0.207392 |    N/A   | 0.000268 |
+
 
 
 > We are reporting NDCG, HR and MAP @ 10 for all models.
