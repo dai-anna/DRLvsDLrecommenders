@@ -12,7 +12,7 @@ Sequential transactional data can be leveraged to recommend relevant products wi
 Taking one step further from the SNQN model is the SA2C framework proposed by Xin Xin, et al. in the same publication [1]. The authors propose calculating the "advantage" of a positive action over the average case to normalize weights and reduce positive bias.
 
 #### Bayesian Personalized Ranking
-In BPR, instead of taking one item, item pairs will be considered as training data. Optimization would be performed based on the rank of these user-item pairs instead of scoring just on the user-item interaction. 
+In BPR, instead of taking one item, item pairs will be considered as training data. Optimization would be performed based on the rank of these user-item pairs instead of scoring just on the user-item interaction. If user *u* views item *i* but not item *j*, then the algorithm ascribes positive feedback to this interaction and infers that *u* prefers *i* over *j*.
 
 ## 🔢 Data
 In both our datasets, there is a lack of explicit negative feedback. 
