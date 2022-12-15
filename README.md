@@ -99,8 +99,8 @@ Navigate to the folder of the model and dataset you are interested to run. Locat
 
 ## 👯 Contributors
 
-| Name | Reference | Primary Technical Contributions |
-|---- | ----|
+| **Name** | **Reference** | **Primary Technical Contributions** |
+|---- | ----| ----|
 |Cindy Chiu | [GitHub Profile](https://github.com/cindy-yuting-chiu)| SA2C model implementation and preprocessing |
 |Anna Dai | [GitHub Profile](https://github.com/dai-anna)| SNQN model implementation, preprocessing and edits for BPR on Diginetica |
 |Preet Khowaja |[GitHub Profile](https://github.com/preetkhowaja)| BPR model implement and preprocessing |
