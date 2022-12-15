@@ -11,8 +11,8 @@ Sequential transactional data can be leveraged to recommend relevant products wi
 #### *Supervised Advantage Actor-Critic (SA2C)*
 Taking one step further from the SNQN model is the SA2C framework proposed by Xin Xin, et al. in the same publication [1]. The authors propose calculating the "advantage" of a positive action over the average case to normalize weights and reduce positive bias.
 
-#### *Bayesian Personalized Ranking*
-In BPR, instead of taking one item, item pairs will be considered as training data. Optimization would be performed based on the rank of these user-item pairs instead of scoring just on the user-item interaction. If user *u* views item *i* but not item *j*, then the algorithm ascribes positive feedback to this interaction and infers that *u* prefers *i* over *j*.
+#### *Bayesian Personalized Ranking (BPR)*
+The BPR model takes non-sequential user-item iteraction data as input. Instead of taking one item, item pairs will be considered as training data. Optimization would be performed based on the rank of these user-item pairs instead of scoring just on the user-item interaction. If user *u* views item *i* but not item *j*, then the algorithm ascribes positive feedback to this interaction and infers that *u* prefers *i* over *j* [2].
 
 ## 🔢 Data
 In both our datasets, there is a lack of explicit negative feedback. 
@@ -20,7 +20,7 @@ In both our datasets, there is a lack of explicit negative feedback.
 ### Diginetica
 > Download [here](https://competitions.codalab.org/competitions/11161)
 
-This dataset is released as part of the *CIKM Cup 2016 Track 2: Personalized E-Commerce Search Challenge*. The dataset features anonymized search, browsing, and purchase logs, product data, and product images. For the purpose of our project, we primarily leverage the view and purchase logs. \\
+This dataset is released as part of the *CIKM Cup 2016 Track 2: Personalized E-Commerce Search Challenge*. The dataset features anonymized search, browsing, and purchase logs, product data, and product images. For the purpose of our project, we primarily leverage the view and purchase logs. 
 
 
 ### RetailRocket
@@ -140,5 +140,6 @@ Navigate to the folder of the model and dataset you are interested to run. Locat
 
 ## 📚 References
 [1] Xin, Xin, et al. "Supervised Advantage Actor-Critic for Recommender Systems." Proceedings of the Fifteenth ACM International Conference on Web Search and Data Mining. 2022.
+
 [2] Rendle, Steffen, et al. "BPR: Bayesian Personalized Ranking from Implicit Feedback". Machine Learning Lab, University of Hildesheim. 2009.
 
