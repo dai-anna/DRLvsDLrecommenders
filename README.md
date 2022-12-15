@@ -30,20 +30,23 @@ Preprocess data...
 
 ### Diginetica
 
-| **Models**  | **NG...** | **HR** | **MAP** |
+| **Models**  | **NDCG** | **HR** | **MAP** |
 | :---------: | :-----: | :-----: | :-----: |
-| SASRec-SNQN |   0.0   |   0.0   |  0.0   |
-|  GRU-SA2C   |   0.0   |   0.0   |  0.0   |
-|     BPR     |   0.0   |   0.0   |  0.0.  |
+| SASRec-SNQN |   0.179246   |   0.179246   |  N/A   |
+|  GRU-SA2C   |   0.0   |   0.0   |  N/A   |
+|     BPR     |   0.0   |   N/A  |  0.0.  |
 
+> We are reporting NDCG and HR @ 5 for the DRL models.
 
 ### Retailrocket
 
-| **Models**  | **NG...** | **HR** | **MAP** |
+| **Models**  | **NDCG** | **HR** | **MAP** |
 | :---------: | :-----: | :-----: | :-----: |
-| SASRec-SNQN |   0.0   |   0.0   |  0.0   |
-|  GRU-SA2C   |   0.0   |   0.0   |  0.0   |
+| SASRec-SNQN |   0.0   |   0.0   |  N/A   |
+|  GRU-SA2C   |   0.0   |   0.0   |  N/A   |
 |     BPR     |   0.207392   |   N/A   |  0.000268  |
+
+> We are reporting NDCG and HR @ 5 for the DRL models.
 
 ## ⚙️ Reproduce our Study
 > Note: CUDA will be required for the code to work! Some of the models are memory and compute intensive.
@@ -77,7 +80,7 @@ Navigate to the folder of the model and dataset you are interested to run. Locat
 │   │   └── xxx.ipynb
 │   └── Retailrocket.ipynb
 │       └── xxx.ipynb
-├── SQNQ
+├── SQNQ_SASRec
 │   ├── Diginetica
 │   │   └── xxx.ipynb
 │   └── Retailrocket.ipynb
