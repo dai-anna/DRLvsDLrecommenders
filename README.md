@@ -25,7 +25,7 @@ The dataset is released as part of a Kaggle competition. This raw data set conta
 
 ## 🛠️ Methodology
 ### Deep Reinforcement Models
-Both SNQN and SA2C models require click (or view), purchase (or add to cart) data. While both are positive interactions, we treat clicks as negative signals and purchases as positive, where only positive signals affect the user state as part of the model. We leverage the open-sourced implementation code as part
+Both SNQN and SA2C models require click (or view), purchase (or add to cart) data. While both are positive interactions, we treat clicks as negative signals and purchases as positive, where only positive signals affect the user state as part of the model. We leverage the open-sourced implementation [code](https://drive.google.com/file/d/185KB520pBLgwmiuEe7JO78kUwUL_F45t/view) provided in Xin Xin's paper.
 
 ### Deep Learning Model
 Preprocess data...
@@ -106,4 +106,5 @@ Navigate to the folder of the model and dataset you are interested to run. Locat
 
 ## 📚 References
 [1] Xin, Xin, et al. "Supervised Advantage Actor-Critic for Recommender Systems." Proceedings of the Fifteenth ACM International Conference on Web Search and Data Mining. 2022.
+[TODO] @Preet Add paper for BPR
 
