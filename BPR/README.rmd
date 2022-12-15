@@ -1,1 +1,1 @@
-# Bayesian Personalized Ranking
+This folder contains a trained BPR model on Diginetica and RetailRocket data
