@@ -12,7 +12,7 @@ Sequential transactional data can be leveraged to recommend relevant products wi
 
 #### Bayesian Personalized Ranking
 
-## 📊 Data
+## 🔢 Data
 ### Diginetica
 > Download [here](https://competitions.codalab.org/competitions/11161)
 
@@ -21,8 +21,7 @@ This dataset is released as part of the *CIKM Cup 2016 Track 2: Personalized E-C
 ### Retailrocket
 > Download [here](https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset)
 
-The data has been collected from a real-world ecommerce website. It is raw data, i.e. without any content transformations, however, all values are hashed due to confidential issues.
-
+The dataset is released as part of a Kaggle competition. This raw data set contains data on user-item interactions and item properties. For the purpose of this project we leverage the user-item interactions like clicks, add to carts, transactions.
 
 ## 🛠️ Methodology
 ### Deep Reinforcement Models
@@ -32,7 +31,7 @@ Modify code as needed
 ### Deep Learning Model
 Preprocess data...
 
-## 🔬 Results
+## 🔎 Results
 
 ### Diginetica
 
@@ -98,11 +97,14 @@ Navigate to the folder of the model and dataset you are interested to run. Locat
         └── xxx.ipynb
 ```
 
-## Contributors
+## 👯 Contributors
 
 | Name | Reference |
 |---- | ----|
 |Cindy Chiu | [GitHub Profile](https://github.com/cindy-yuting-chiu)|
 |Anna Dai | [GitHub Profile](https://github.com/dai-anna)|
 |Preet Khowaja |[GitHub Profile](https://github.com/preetkhowaja)|
+
+## 📚 References
+[1] Xin, Xin, et al. "Supervised Advantage Actor-Critic for Recommender Systems." Proceedings of the Fifteenth ACM International Conference on Web Search and Data Mining. 2022.
 
