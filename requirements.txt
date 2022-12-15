@@ -4,3 +4,4 @@ cornac
 papermill
 scrapbook
 recommenders
+pandas
