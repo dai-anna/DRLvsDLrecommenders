@@ -16,17 +16,16 @@ Sequential transactional data can be leveraged to recommend relevant products wi
 ### Diginetica
 > Download [here](https://competitions.codalab.org/competitions/11161)
 
-This dataset is released as part of the *CIKM Cup 2016 Track 2: Personalized E-Commerce Search Challenge*. The dataset features anonymized search, browsing, and purchase logs, product data, and product images. For the purpose of our project, we primarily leverage the view and purchase logs, where we consider items that any user viewed but did not buy as a negative signal and any items bought as a positive signal.
+This dataset is released as part of the *CIKM Cup 2016 Track 2: Personalized E-Commerce Search Challenge*. The dataset features anonymized search, browsing, and purchase logs, product data, and product images. For the purpose of our project we leverage primarily the view and purchase logs.
 
-### Retailrocket
+### RetailRocket
 > Download [here](https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset)
 
-The dataset is released as part of a Kaggle competition. This raw data set contains data on user-item interactions and item properties. For the purpose of this project we leverage the user-item interactions like clicks, add to carts, transactions.
+The dataset is released as part of a Kaggle competition. This raw data set contains data on user-item interactions and item properties. For the purpose of this project we leverage the user-item interactions like clicks, add to carts, and transactions.
 
 ## 🛠️ Methodology
 ### Deep Reinforcement Models
-Preprocess data..
-Modify code as needed
+Both SNQN and SA2C models require click (or view), purchase (or add to cart) data. While both are positive interactions, we treat clicks as negative signals and purchases as positive, where only positive signals affect the user state as part of the model. We leverage the open-sourced implementation code as part
 
 ### Deep Learning Model
 Preprocess data...
