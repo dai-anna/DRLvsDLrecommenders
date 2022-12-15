@@ -2,7 +2,7 @@
 
 ## 💡 Introduction
 Recommendation engines are present in every aspect of our digital lifes today. The retail industry in particular heavily depends on efficient algorithms to push the products to relevant customers.
-In this project, we implement and benchmark the performance of two Deep Reinforcement Learning (DRL) models and one Deep Learning model (DL) on two separate datasets in order to better understand the nuances of each system.
+In this project, we implement and benchmark the performance of two Deep Reinforcement Learning (DRL) models and one Deep Learning (DL) model on two separate datasets in order to better understand the nuances of each system.
 
 ### Deep Reinforcement Models
 #### *Supervised Negative Q-learning (SNQN)*
@@ -12,15 +12,15 @@ Sequential transactional data can be leveraged to recommend relevant products wi
 Taking one step further from the SNQN model is the SA2C framework proposed by Xin Xin, et al. in the same publication [1]. The authors propose calculating the "advatage" of a positive action over the average case to normalize weights and reduce positive bias.
 
 #### Bayesian Personalized Ranking
-[TODO]@Preet
+[TODO]@Preet 
 
 ## 🔢 Data
-In both our datasets, there is a lack of explicit negative feedback. For the purpose of our project, we deem items that a user viewed but did not buy as a proxy for negative feedback and items that are purchased as positive.
+In both our datasets, there is a lack of explicit negative feedback. 
 
 ### Diginetica
 > Download [here](https://competitions.codalab.org/competitions/11161)
 
-This dataset is released as part of the *CIKM Cup 2016 Track 2: Personalized E-Commerce Search Challenge*. The dataset features anonymized search, browsing, and purchase logs, product data, and product images. For the purpose of our project, we primarily leverage the view and purchase logs, where we consider items that any user viewed but did not buy as a negative signal and any items bought as a positive signal.
+This dataset is released as part of the *CIKM Cup 2016 Track 2: Personalized E-Commerce Search Challenge*. The dataset features anonymized search, browsing, and purchase logs, product data, and product images. For the purpose of our project, we primarily leverage the view and purchase logs.
 
 ### Retailrocket
 > Download [here](https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset)
@@ -29,9 +29,6 @@ The dataset is released as part of a Kaggle competition. This raw data set conta
 
 ## 🛠️ Methodology
 ### Deep Reinforcement Models
-
-
-
 We leverage the open-sourced implementation [code](https://drive.google.com/file/d/185KB520pBLgwmiuEe7JO78kUwUL_F45t/view) provided by Xin Xin, et al. We proceed to preprocess our datasets 
 
 ### Deep Learning Model
