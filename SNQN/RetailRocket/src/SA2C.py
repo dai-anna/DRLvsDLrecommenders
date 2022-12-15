@@ -11,6 +11,10 @@ from SASRecModules import *
 import trfl
 from trfl import indexing_ops
 
+import warnings
+
+warnings.filterwarnings('ignore')
+
 tf.compat.v1.disable_eager_execution()  # AD
 
 
