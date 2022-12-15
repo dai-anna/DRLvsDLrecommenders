@@ -2,7 +2,7 @@
 
 ## 💡 Introduction
 Recommendation engines are present in every aspect of our digital lifes today. The retail industry in particular heavily depends on efficient algorithms to push the products to relevant customers.
-In this project, we implement and benchmark the performance of two Deep Reinforcement Learning models and one Deep Learning model on two separate datasets in order to better understand the nuances of each system.
+In this project, we implement and benchmark the performance of two Deep Reinforcement Learning (DRL) models and one Deep Learning model (DL) on two separate datasets in order to better understand the nuances of each system.
 
 ### Deep Reinforcement Models
 #### *Supervised Negative Q-learning (SNQN)*
@@ -14,8 +14,14 @@ Sequential transactional data can be leveraged to recommend relevant products wi
 
 ## 📊 Data
 ### Diginetica
+> Download [here](https://competitions.codalab.org/competitions/11161)
+
+This dataset is released as part of the *CIKM Cup 2016 Track 2: Personalized E-Commerce Search Challenge*. The dataset features anonymized search, browsing, and purchase logs, product data, and product images. For the purpose of our project, we primarily leverage the view and purchase logs, where we consider items that any user viewed but did not buy as a negative signal and any items bought as a positive signal.
 
 ### Retailrocket
+> Download [here](https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset)
+
+The data has been collected from a real-world ecommerce website. It is raw data, i.e. without any content transformations, however, all values are hashed due to confidential issues.
 
 
 ## 🛠️ Methodology
@@ -32,11 +38,11 @@ Preprocess data...
 
 | **Models**  | **NDCG** | **HR** | **MAP** |
 | :---------: | :-----: | :-----: | :-----: |
-| SASRec-SNQN |   0.179246   |   0.179246   |  N/A   |
+| SASRec-SNQN |   0.142716   |   0.234636   |  N/A   |
 |  GRU-SA2C   |   0.0   |   0.0   |  N/A   |
-|     BPR     |   0.0   |   N/A  |  0.0.  |
+|     BPR     |   0.104363   |   N/A  |  0.000246  |
 
-> We are reporting NDCG and HR @ 5 for the DRL models.
+> We are reporting NDCG, HR and MAP @ 10 for all models.
 
 ### Retailrocket
 
@@ -46,7 +52,7 @@ Preprocess data...
 |  GRU-SA2C   |   0.0   |   0.0   |  N/A   |
 |     BPR     |   0.207392   |   N/A   |  0.000268  |
 
-> We are reporting NDCG and HR @ 5 for the DRL models.
+> We are reporting NDCG, HR and MAP @ 10 for all models.
 
 ## ⚙️ Reproduce our Study
 > Note: CUDA will be required for the code to work! Some of the models are memory and compute intensive.
