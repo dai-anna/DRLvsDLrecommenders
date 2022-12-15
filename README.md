@@ -140,4 +140,5 @@ Navigate to the folder of the model and dataset you are interested to run. Locat
 
 ## 📚 References
 [1] Xin, Xin, et al. "Supervised Advantage Actor-Critic for Recommender Systems." Proceedings of the Fifteenth ACM International Conference on Web Search and Data Mining. 2022.
+[2] Rendle, Steffen, et al. "BPR: Bayesian Personalized Ranking from Implicit Feedback". Machine Learning Lab, University of Hildesheim. 2009.
 
