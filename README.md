@@ -83,23 +83,26 @@ pip install -r requirements.txt
 
 #### Command Line for DRL Models
 
-To reproduce the results for the DRL models on Diginetica, download the datasets and save it in the ```\data``` folder. We will only need ```data\train-purchases.csv``` and ```train-item-views.csv``` as our input. 
+To reproduce the results for the DRL models on Diginetica, download the datasets and save it in the ```/data``` folder. We will only need ```data/train-purchases.csv``` and ```data/train-item-views.csv``` as our input. To get the pre-processed data for Diginetica, where we combine the view and purchase dataframe with a is_purchase flag, run the the following command:
+```
+python src/preprocessing_dg.py
+```
+For RetailRocket, we only need the file ```data/events.csv```. We also need to clean up the dataframe and create a is_purchase indicator for the data. Run the following command to get the pre-processed data. 
+```
+python src/preprocessing_rr.py
+```
 
-To get the pre-processed data, where we combine the view and purchase dataframe with a is_purchase flag, run the the following command:
+After getting the output file, the processes are similar between RetailRocket and Diginetica. Run the split file to get training and validation data:
 ```
-python preprocessing_dg.py
-```
-After getting the output file, run the split file to get training and validation data:
-```
-python split_train.py
+python src/split_train.py
 ```
 Then use the training set to create replay buffer for the model:
 ```
-python gen_replay_buffer.py
+python src/gen_replay_buffer.py
 ```
 We'll also calculate item popularity:
 ```
-python cal_pop.py
+python src/pop.py
 ```
 The steps above will generate all the files we need to run the DRL python scripts. 
 
