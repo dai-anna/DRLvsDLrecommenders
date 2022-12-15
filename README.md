@@ -101,9 +101,9 @@ Navigate to the folder of the model and dataset you are interested to run. Locat
 
 | **Name** | **Reference** | **Primary Technical Contributions** |
 |---- | ----| ----|
-|Cindy Chiu | [GitHub Profile](https://github.com/cindy-yuting-chiu)| SA2C model implementation and preprocessing |
-|Anna Dai | [GitHub Profile](https://github.com/dai-anna)| SNQN model implementation, preprocessing and edits for BPR on Diginetica |
-|Preet Khowaja |[GitHub Profile](https://github.com/preetkhowaja)| BPR model implement and preprocessing |
+|Cindy Chiu | [GitHub Profile](https://github.com/cindy-yuting-chiu)| SA2C model implementation, preprocessing, and initial exploration |
+|Anna Dai | [GitHub Profile](https://github.com/dai-anna)| SNQN model implementation, preprocessing and edits for BPR on Retail Rocket |
+|Preet Khowaja |[GitHub Profile](https://github.com/preetkhowaja)| BPR model implement and preprocessing, and initial exploration |
 
 ## 📚 References
 [1] Xin, Xin, et al. "Supervised Advantage Actor-Critic for Recommender Systems." Proceedings of the Fifteenth ACM International Conference on Web Search and Data Mining. 2022.
