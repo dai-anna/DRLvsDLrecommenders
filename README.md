@@ -43,7 +43,7 @@ Preprocess data...
 | :---------: | :-----: | :-----: | :-----: |
 | SASRec-SNQN |   0.0   |   0.0   |  0.0   |
 |  GRU-SA2C   |   0.0   |   0.0   |  0.0   |
-|     BPR     |   0.0   |   0.0   |  0.0.  |
+|     BPR     |   0.207392   |   N/A   |  0.000268  |
 
 ## ⚙️ Reproduce our Study
 > Note: CUDA will be required for the code to work! Some of the models are memory and compute intensive.
@@ -66,6 +66,7 @@ pip install -r requirements.txt
 ```
 
 **4. Run our Notebooks**
+
 Navigate to the folder of the model and dataset you are interested to run. Locate the **notebook** in the folder, download the data as instructed in the notebook and run it to reproduce our results. Auxilary files in each folder are used in each notebook.
 
 ### Locate our notebooks 
