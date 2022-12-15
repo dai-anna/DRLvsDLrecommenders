@@ -83,7 +83,7 @@ Navigate to the folder of the model and dataset you are interested to run. Locat
 ├── BPR
 │   ├── Diginetica
 │   │   └── xxx.ipynb
-│   └── Retailrocket.ipynb
+│   └── Retailrocket
 │       └── xxx.ipynb
 ├── SQNQ_SASRec
 │   ├── Diginetica
@@ -99,11 +99,11 @@ Navigate to the folder of the model and dataset you are interested to run. Locat
 
 ## 👯 Contributors
 
-| Name | Reference |
+| Name | Reference | Primary Technical Contributions |
 |---- | ----|
-|Cindy Chiu | [GitHub Profile](https://github.com/cindy-yuting-chiu)|
-|Anna Dai | [GitHub Profile](https://github.com/dai-anna)|
-|Preet Khowaja |[GitHub Profile](https://github.com/preetkhowaja)|
+|Cindy Chiu | [GitHub Profile](https://github.com/cindy-yuting-chiu)| SA2C model implementation and preprocessing |
+|Anna Dai | [GitHub Profile](https://github.com/dai-anna)| SNQN model implementation, preprocessing and edits for BPR on Diginetica |
+|Preet Khowaja |[GitHub Profile](https://github.com/preetkhowaja)| BPR model implement and preprocessing |
 
 ## 📚 References
 [1] Xin, Xin, et al. "Supervised Advantage Actor-Critic for Recommender Systems." Proceedings of the Fifteenth ACM International Conference on Web Search and Data Mining. 2022.
